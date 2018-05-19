@@ -13,7 +13,7 @@ jobs:
       - run:
           name: Setup Code Climate test-reporter
           command: |
-            curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+            curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter after-build -r --id fd1f4d55a41b790dd5de5d2665943c5d4ba69bab2a9fa6ca8871d694fd8db062
             chmod +x ./cc-test-reporter
       - save_cache: # special step to save the dependency cache
           key: dependency-cache-{{ checksum "package.json" }}
